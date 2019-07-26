@@ -6,7 +6,7 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-
+var lessonsRouter = require('./routes/lessons');
 var app = express();
 
 // view engine setup
@@ -21,11 +21,14 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-
+app.use('/lessons' , lessonsRouter);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
 });
+
+// Set Public Folder
+app.use(express.static(path.join(__dirname, 'public')));
 
 // error handler
 app.use(function(err, req, res, next) {
@@ -36,6 +39,16 @@ app.use(function(err, req, res, next) {
   // render the error page
   res.status(err.status || 500);
   res.render('error');
+});
+//Home Route
+app.get('/', function(req, res){
+    if(err){
+      console.log(err);
+    } else {
+      res.render('index', {
+
+      });
+    }
 });
 
 module.exports = app;
