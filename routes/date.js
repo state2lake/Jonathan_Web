@@ -1,9 +1,9 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET lessons page. */
+/* GET date page. */
 router.get('/', function(req, res){
-    res.render('lessons', {
+    res.render('date', {
         title: 'About'
     });
 });

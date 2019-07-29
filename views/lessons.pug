@@ -1,1 +1,88 @@
-<h1> This is the lesson page </h1>
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary"  >
+
+
+
+    <div class="collapse navbar-collapse" id="navbarColor01">
+
+
+        <a id="home" class="nav-link" href="/" >Home </a>
+
+
+        <a id="lessons" class="nav-link" href="/lessons">Lessons</a>
+
+
+    </div>
+</nav>
+
+
+ script.
+    function fieldValidation() {
+       var x = document.forms["infoForm"]["input"].value;
+         if (x == "") {
+           alert("Name must be filled out");
+
+           return false;
+         }
+    }
+
+</head>
+
+<body>
+
+<h1 id="header"> Sign your kid up for a hitting/fielding lesson this Fall! </h1>
+<small> Have the flexibility to choose dates that work best for you, right here! </small>
+<br>
+<small> Your data will never be shared with anyone but me. </small>
+<br>
+<br>
+<form name="infoForm"  >
+
+  <label name="Label"> Parent name: </label>
+  <br>
+  <input name="input" style="width:45%" placeholder="William Smith"> </input>
+<br>
+<br>
+<br>
+  <label name="Label"> Parent email: </label>
+  <br>
+  <input type="email" name="input" style="width:45%" placeholder="myEmail@aol.com" > </input>
+<br>
+<br>
+<br>
+  <label name="Label">  Parent phone: </label>
+  <br>
+  <input type="tel"name="input" style="width:45%" placeholder="7707654321"></input>
+<br>
+<br>
+<br>
+   <label name="Label"> Kid's name: </label>
+   <br>
+   <input name="input" style="width:45%" placeholder="Mikey Smith"></input>
+<br>
+<br>
+<br>
+   <label name="Label"> Kid's age: </label>
+   <br>
+   <input name="input" style="width:45%" placeholder="11"></input>
+
+<br>
+<br>
+<br>
+
+
+<button id="nextButton" style="width: 15%" href="/date"> Next </button>
+</form>
+
+
+
+</body>
+</html>
