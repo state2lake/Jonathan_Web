@@ -26,10 +26,7 @@ app.use('/', indexRouter);
 app.use('/lessons' , lessonsRouter);
 app.use('/date', dateRouter);
 
-// catch 404 and forward to error handler
-app.use(function(req, res, next) {
-  next(createError(404));
-});
+
 
 // Set Public Folder
 app.use(express.static(path.join(__dirname, 'public')));
@@ -54,5 +51,8 @@ app.get('/', function(req, res){
       });
     }
 });
-
+// catch 404 and forward to error handler
+app.use(function(req, res, next) {
+    next(createError(404));
+});
 module.exports = app;
