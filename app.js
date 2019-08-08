@@ -7,7 +7,7 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var lessonsRouter = require('./routes/lessons');
 var dateRouter = require('./routes/date');
-
+var aboutRouter = require('./routes/about');
 var app = express();
 
 // view engine setup
@@ -25,7 +25,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/lessons' , lessonsRouter);
 app.use('/date', dateRouter);
-
+app.use('/about', aboutRouter);
 
 
 // Set Public Folder
