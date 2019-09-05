@@ -44,40 +44,40 @@
 <small> Your data will never be shared with anyone but me. </small>
 <br>
 <br>
-<form name="infoForm"  >
+<form name="infoForm" method="post" action="/test-page" >
 
   <label name="Label"> Parent name: </label>
   <br>
-  <input name="input" style="width:45%" placeholder="William Smith"> </input>
+  <input name="parentName" style="width:45%" placeholder="William Smith"> </input>
 <br>
 <br>
 <br>
   <label name="Label"> Parent email: </label>
   <br>
-  <input type="email" name="input" style="width:45%" placeholder="myEmail@aol.com" > </input>
+  <input type="email" name="parentEmail" style="width:45%" placeholder="myEmail@aol.com" > </input>
 <br>
 <br>
 <br>
   <label name="Label">  Parent phone: </label>
   <br>
-  <input type="tel"name="input" style="width:45%" placeholder="7707654321"></input>
+  <input type="tel"name="phone" style="width:45%" placeholder="7707654321"></input>
 <br>
 <br>
 <br>
    <label name="Label"> Kid's name: </label>
    <br>
-   <input name="input" style="width:45%" placeholder="Mikey Smith"></input>
+   <input name="kidName" style="width:45%" placeholder="Mikey Smith"></input>
 <br>
 <br>
 <br>
    <label name="Label"> Kid's age: </label>
    <br>
-   <input name="input" style="width:45%" placeholder="11"></input>
+   <input name="kidAge" style="width:45%" placeholder="11"></input>
 
 <br>
 <br>
 <br>
-
+<button id="primary-submit" type="submit" class="btn btn-primary">Submit</button>
 
 
 </form>

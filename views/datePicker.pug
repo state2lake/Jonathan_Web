@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" type="text/css" href="css/bootstrap_sketch.css" />
+
+  script(src='https://code.jquery.com/jquery-1.12.4.js')
+  script(src='https://code.jquery.com/ui/1.12.1/jquery-ui.js')
+  script(src='https://cdn.jsdelivr.net/npm/jtsage-datebox-bootstrap3@5.1.5/jtsage-datebox.min.js" type="text/javascript')
+
+  script.
+         var array = ["2019-08-24", "2019-08-25", "2019-08-26"];
+
+         $(function () {
+           $('#datepicker').datepicker({
+             dateFormat: 'yy-mm-dd',
+             beforeShowDay: function( date) {
+
+               var string = jQuery.datepicker.formatDate('yy-mm-dd', date);
+
+
+               return [array.indexOf(string) == -1]
+             }
+           });
+         });
+script.
+    $(function () {
+    
+    }
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary"  >
+
+
+
+    <div class="collapse navbar-collapse" id="navbarColor01">
+
+
+        <a id="home" class="nav-link" href="/" >Home </a>
+
+
+        <a id="lessons" class="nav-link" href="/lessons">Lessons</a>
+
+
+        <a id="about" class="nav-link" href="/about">About</a>
+    </div>
+</nav>
+
+<body>
+<form name="infoForm" method="post" action="/dateTime"  >
+
+<p>Date: </p>
+
+<div class="newClass">
+<input name="date"id="datepicker" type="text">
+</div>
+<br>
+<br>
+<p>Time: </p>
+<div class="newClass">
+ <input name="time"type="time">
+</div>
+<br>
+<br>
+<button id="primary-submit" type="submit" class="btn btn-primary">Submit</button>
+</form>
+</body>
+</html>
+
